@@ -118,13 +118,6 @@ services:
       - prometheus
     restart: unless-stopped
 
-  scheduler:
-    image: taskscheduler:1.0
-    environment:
-      - TASK_SCHEDULER_URL=${TASK_SCHEDULER_URL}
-      - TASK_SCHEDULE=${TASK_SCHEDULE}
-      - TASK_KEY=${TASK_KEY}
-
 ## By default this config uses default local driver,
 ## For custom volumes replace with volume driver configuration.
 volumes:
